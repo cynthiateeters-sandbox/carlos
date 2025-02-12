@@ -1,20 +1,31 @@
 {
   "name": "carlos1",
   "version": "1.2.0",
-  "description": "",
+  "description": "A simple CLI tool that prints the author's name to the console.",
   "main": "index.js",
   "bin": {
     "carlos": "index.js"
   },
+  "files": [
+    "index.js",
+    "README.md",
+    "CODE_OF_CONDUCT.md"
+  ],
   "scripts": {
     "test": "echo \"error: no test specified\" && exit 1",
-    "lint": "eslint index.js"
+    "lint": "eslint index.js",
+    "build": "babel index.js -d lib",
+    "prepublishOnly": "npm test && npm run lint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cruz1508/carlos.git"
   },
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "command-line",
+    "tool"
+  ],
   "author": "Carlos Cruz <g00310197@stu.raritanval.edu> (https://github.com/cruz1508)",
   "license": "MIT",
   "bugs": {
